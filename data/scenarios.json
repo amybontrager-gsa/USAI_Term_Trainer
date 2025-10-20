@@ -1,1 +1,53 @@
-
+[
+  {
+    "id": "chatbot-foia",
+    "title": "Citizen Chatbot about FOIA",
+    "prompt": "You’re piloting a chatbot to answer basic FOIA questions from public web pages.",
+    "options": [
+      {
+        "label": "Launch with RAG from agency FAQs + human escalation",
+        "outcome": "safe",
+        "explanation": "Grounding + escalation = Safe to Try for low-risk Q&A."
+      },
+      {
+        "label": "Let it answer anything without sources",
+        "outcome": "review",
+        "explanation": "Ungrounded answers risk hallucinations; needs guardrails and scope."
+      }
+    ]
+  },
+  {
+    "id": "summarize-comments",
+    "title": "Summarizing Public Comments",
+    "prompt": "Team wants to summarize 5,000 public comments to identify themes.",
+    "options": [
+      {
+        "label": "Use an external API with de-identification and sample-based evaluation",
+        "outcome": "safe",
+        "explanation": "Mask PII, evaluate accuracy, and keep an audit log."
+      },
+      {
+        "label": "Upload raw comments including PII to any free model site",
+        "outcome": "review",
+        "explanation": "Sensitive data handling violations; requires approved environment."
+      }
+    ]
+  },
+  {
+    "id": "contractor-intake",
+    "title": "Intake for AI Use Cases",
+    "prompt": "Program office wants a fast intake form for proposed AI uses.",
+    "options": [
+      {
+        "label": "Create a lightweight form with risk tags and routing to governance",
+        "outcome": "safe",
+        "explanation": "Intake + triage supports transparency and oversight."
+      },
+      {
+        "label": "Accept proposals by DM with no records",
+        "outcome": "review",
+        "explanation": "Lacks accountability and auditability; needs official intake."
+      }
+    ]
+  }
+]
