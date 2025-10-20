@@ -1,1 +1,82 @@
-
+[
+  {
+    "id": "llm",
+    "term": "Large Language Model (LLM)",
+    "category": "Concept",
+    "definition": "A model trained on massive text corpora that predicts the next token to generate or classify text.",
+    "gov_example": "Summarizing long memos into 1–2 paragraph briefs before human review.",
+    "leader_blurb": "LLMs speed drafting and synthesis; keep humans in the loop and protect sensitive data."
+  },
+  {
+    "id": "inference",
+    "term": "Inference",
+    "category": "Lifecycle",
+    "definition": "Using a trained model to generate outputs for real users.",
+    "gov_example": "Answering common citizen questions with escalation to a human when confidence is low.",
+    "leader_blurb": "Plan for monitoring, fallback, and audit logs during inference."
+  },
+  {
+    "id": "training",
+    "term": "Training",
+    "category": "Lifecycle",
+    "definition": "The heavy compute process where a model learns patterns from data.",
+    "gov_example": "Fine-tuning a model on de-identified agency docs to improve task accuracy.",
+    "leader_blurb": "Training decisions shape bias and risk; require governance and documented datasets."
+  },
+  {
+    "id": "api",
+    "term": "API",
+    "category": "Platform",
+    "definition": "A structured way for software to talk to other software.",
+    "gov_example": "Calling a model via an API key with rate limits and budget tracking.",
+    "leader_blurb": "Assign clear ownership for keys, budgets, and data handling."
+  },
+  {
+    "id": "hallucination",
+    "term": "Hallucination",
+    "category": "Risk",
+    "definition": "When a model produces confident but incorrect information.",
+    "gov_example": "A chatbot invents a non-existent form number for a permit.",
+    "leader_blurb": "Design human review and retrieval from trusted sources to reduce risk."
+  },
+  {
+    "id": "prompt",
+    "term": "Prompt Engineering",
+    "category": "Concept",
+    "definition": "Designing inputs and instructions that guide the model’s behavior.",
+    "gov_example": "Using templates for summarize/extract/classify with role, constraints, and examples.",
+    "leader_blurb": "Standardize safe-to-try prompt patterns; avoid sensitive data in prompts."
+  },
+  {
+    "id": "raga",
+    "term": "Retrieval-Augmented Generation (RAG)",
+    "category": "Platform",
+    "definition": "Combining a model with a search over your own documents for grounded answers.",
+    "gov_example": "Answering FAQs from a knowledge base of current agency guidance.",
+    "leader_blurb": "Keep sources updated; log citations for transparency."
+  },
+  {
+    "id": "pii",
+    "term": "PII & Sensitive Data",
+    "category": "Governance",
+    "definition": "Personally identifiable or otherwise restricted information requiring special handling.",
+    "gov_example": "Masking names/SSNs before sending to an external model.",
+    "leader_blurb": "Adopt data minimization and approved environments before any AI use."
+  },
+  {
+    "id": "evals",
+    "term": "Model Evaluations",
+    "category": "Governance",
+    "definition": "Systematic tests of model quality, bias, and safety.",
+    "gov_example": "Red-teaming and accuracy checks on agency tasks before rollout.",
+    "leader_blurb": "Track metrics, publish methods, and gate launches on results."
+  },
+  {
+    "id": "guardrails",
+    "term": "Guardrails",
+    "category": "Governance",
+    "definition": "Technical and process controls that constrain model behavior.",
+    "gov_example": "Blocking harmful topics, enforcing source-only answers, adding human approval steps.",
+    "leader_blurb": "Pair technical guardrails with policy and training."
+  }
+]
