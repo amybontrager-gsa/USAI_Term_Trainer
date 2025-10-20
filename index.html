@@ -1,31 +1,72 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset=utf-8"/>
-    <meta name="viewport" content=width=device-width, inital-scale=1" />
-    <title>USAi Term Trainer</title>
-  </head>
-  <body>
-    <header class="site-header">
-     <div class="container">
-    <h1>Welcome to the USAi Term Trainer</h1>
-    <p class="tagline">Plain-English AI literacy for government leaders</p>
-     </div>
-    </header>  
-<main class="container"> 
-  <section class="card">
-    <h2> Welcome : wave: </h2>
-    <p>This app will help you learn AI concepts that are used in government.</p>
-    <a class="btn" href="#"> Get Started</a> 
-     </section> 
-   </main>
-    <footer class="site-footer">
-      <div class="container">
-        <small>prototype for internal leranning</small>
-      </div> 
-    </footer>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>USAi AI Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>USAi AI Academy</h1>
+      <p class="tagline">Fast, fun AI literacy for government leaders</p>
+      <nav class="tabs" role="tablist" aria-label="Main">
+        <button class="tab active" data-view="learn" role="tab" aria-selected="true">Learn</button>
+        <button class="tab" data-view="quiz" role="tab" aria-selected="false">Quiz</button>
+        <button class="tab" data-view="scenarios" role="tab" aria-selected="false">Scenarios</button>
+      </nav>
+      <div class="progress">
+        <span id="streak">:fire: 0-day streak</span>
+        <span id="bestScore">:sports_medal: Best: 0/5</span>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <!-- LEARN -->
+    <section id="view-learn" class="card" role="tabpanel" aria-labelledby="tab-learn">
+      <div class="controls">
+        <input id="search" placeholder="Search terms…" aria-label="Search terms" />
+        <select id="filter" aria-label="Filter by category">
+          <option value="">All categories</option>
+          <option value="Concept">Concept</option>
+          <option value="Lifecycle">Lifecycle</option>
+          <option value="Platform">Platform</option>
+          <option value="Risk">Risk</option>
+          <option value="Governance">Governance</option>
+        </select>
+      </div>
+      <section id="daily">
+        <h2>Term of the Day</h2>
+        <div id="daily-card" class="term-card"></div>
+      </section>
+      <h2>Browse all terms</h2>
+      <ul id="term-list" class="term-list"></ul>
+    </section>
+    <!-- QUIZ -->
+    <section id="view-quiz" class="card hidden" role="tabpanel" aria-labelledby="tab-quiz">
+      <h2>Quick Quiz (5 questions)</h2>
+      <div id="quiz-container"></div>
+      <div class="actions">
+        <button id="submit-quiz" class="btn">Submit</button>
+        <button id="retry-quiz" class="btn ghost hidden">Try again</button>
+      </div>
+      <div id="quiz-result" class="result"></div>
+    </section>
+    <!-- SCENARIOS -->
+    <section id="view-scenarios" class="card hidden" role="tabpanel" aria-labelledby="tab-scenarios">
+      <h2>Real-world Scenarios</h2>
+      <p>Decide the next step. We’ll tell you if it’s <strong>Safe to Try</strong> or needs <strong>Review & Governance</strong>.</p>
+      <div id="scenario-container"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <small>Prototype • For internal learning</small>
+    </div>
+  </footer>
+  <!-- lightweight confetti -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <script src="app.js"></script>
 </body>
 </html>
-    
-
