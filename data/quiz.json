@@ -1,1 +1,62 @@
-
+[
+  {
+    "q": "What’s the difference between training and inference?",
+    "choices": [
+      "Training happens once; inference happens each time the system is used",
+      "Inference creates data; training deletes data",
+      "They are the same thing"
+    ],
+    "answerIndex": 0,
+    "explain": "Training learns from datasets; inference serves users and produces outputs on demand."
+  },
+  {
+    "q": "Which is the BEST way to reduce hallucinations?",
+    "choices": [
+      "Ask the model to be more confident",
+      "Use RAG to ground answers in trusted documents",
+      "Increase temperature (more randomness)"
+    ],
+    "answerIndex": 1,
+    "explain": "Retrieval-Augmented Generation supplies sources that the model can cite and stick to."
+  },
+  {
+    "q": "What should leaders do about prompts that may contain PII?",
+    "choices": [
+      "Allow them if helpful",
+      "Mask or avoid sending PII; use approved environments",
+      "Only send PII after business hours"
+    ],
+    "answerIndex": 1,
+    "explain": "Minimize/obfuscate sensitive data and use approved systems for any processing."
+  },
+  {
+    "q": "APIs help teams…",
+    "choices": [
+      "Connect apps to models with keys and rate limits",
+      "Make websites prettier",
+      "Avoid documenting anything"
+    ],
+    "answerIndex": 0,
+    "explain": "APIs are controlled interfaces to services like model inference."
+  },
+  {
+    "q": "A good governance practice before rollout is…",
+    "choices": [
+      "Posting a meme",
+      "Red-teaming and publishing evaluation results",
+      "Letting the model learn in production"
+    ],
+    "answerIndex": 1,
+    "explain": "Pre-launch evaluations and red-teaming reduce risk and build trust."
+  },
+  {
+    "q": "Prompt engineering is mainly about…",
+    "choices": [
+      "Picking a model size",
+      "Designing clear instructions, constraints, and examples",
+      "Buying more GPUs"
+    ],
+    "answerIndex": 1,
+    "explain": "Well-structured prompts improve consistency and safety."
+  }
+]
